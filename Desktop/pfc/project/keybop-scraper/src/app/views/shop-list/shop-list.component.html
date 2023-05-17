@@ -1,0 +1,49 @@
+<div class="bop_jumbotron algin-items-start ">
+  <div class="container-fluid text-center text-lg-left ">
+      <div class="row mx-3 d-flex align-items-center">
+          <div class="col-lg-7 col-md-6 col-12">
+              <h1 class="bop_h1">The best way to buy your to
+                  <span class="bop_subtitulo_shop">KEYBOP</span>
+              </h1>
+              <p class="bop_texto-corrido-claro">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                  nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+              <span class="text-center d-inline-block py-4 mt-auto">
+                  <a href="#jump"><button class="btn button btn-outline-success">Let's go!</button></a>
+              </span>
+
+          </div>
+          <div class="col-lg-5 col-md-6 col-12 align-items-center d-flex bop_main-image animated">
+              <img src="assets/img/menpc.svg" alt="jumbotronimage" class="img-fluid">
+          </div>
+      </div>
+  </div>
+</div>
+
+<article>
+   <!-- filtros -->
+
+  <div class="container-fluid d-flex direction-row justify-content-between mt-2 my-4 py-4">
+    <div (click)="pagination(false)" class="bop_pagination-shop d-flex align-items-center m-1"><i class="bi bi-arrow-left"></i></div>
+    <div class="d-flex align-items-center m-1"><span class="m-1">{{paginationNum}}</span></div>
+    <div (click)="pagination(true)" class="bop_pagination-shop d-flex align-items-center m-1"><i class="bi bi-arrow-right"></i></div>
+  </div>
+
+  <!-- cards -->
+  <div class="container" id="jump">
+      <div class="row">
+          <ng-container
+          *ngFor="let product of productList; index as i"
+          >
+            <ng-container *ngIf="i < maxView && i >= minView">
+              <div class="col-lg-3 col-md-6 col-sm-6 mb-3 bop_shopCards">
+                <app-card-shop
+                [productOnList]="product"
+                ></app-card-shop>
+              </div>
+            </ng-container>
+          </ng-container>
+
+      </div>
+  </div>
+</article>
+

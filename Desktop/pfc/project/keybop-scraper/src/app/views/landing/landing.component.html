@@ -1,0 +1,182 @@
+<div *ngIf="loading; else elseBlock">
+<!-- header section -->
+<div class="container bop_section">
+  <div class="row">
+    <div class="col-lg-7 col-md-6 col-sm-12 col-12 align-self-center">
+      <h1 class="bop_h1">Configura tu</h1>
+      <h1 class="bop_subtitulo">KEYBOP</h1>
+      <div class="bop_texto-index">
+        <span class="bop_texto-corrido-claro">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </span>
+      </div>
+
+      <div class="container-fluid bop_contenedor-boton-left">
+        <div class="row">
+          <div class="col-md-8 col-lg-5 col-12">
+            <a [routerLink]="'/shop'">
+              <button class="bop_call-to-action">Let's go!</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-md-6 col-sm-12 col-12 align-self-center">
+      <img class="bop_main-image " src="assets/img/main_img.jpg" alt="main-image">
+    </div>
+  </div>
+</div>
+
+<!-- Primera seccion -->
+<div class="container-fluid">
+  <div class="bop_numberSection">01</div>
+  <div class="bop_nameSection">más vendidos</div>
+  <hr class="my-4">
+</div>
+
+<div class="container bop_section">
+  <div class="row">
+    <div class="col-lg-6 col-12 align-self-center">
+      <div class="bop_section-txt-container">
+        <h2 class="bop_section-subtitle text-primary">NEW PC, GET STARTED WITH THE MOST POPULAR</h2>
+        <p class="bop_section-txt">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua!</p>
+          <div class="collapse" id="collapse2">
+            <i class="me-2 my-3 bi bi-asterisk text-primary"></i>
+            <h4 class="mt-2 fs-6">be smart</h4>
+          </div>
+        <div class="bop_containerKnowMoreSection">
+
+          <div class="bop_containerKnowMoreSection">
+            <span class="bop_knowMore">
+              <a id="knowmore" class="" data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
+                <i class="bi bi-arrow-down"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+        <hr class="bop_hr-margin">
+      </div>
+    </div>
+    <!-- Tarjetas primer nivel -->
+    <div class="col-lg-6 col-12 align-self-center">
+      <div class="row">
+        <div
+          *ngFor="let product of firstSectionFourProducts"
+          class="col-lg-6 col-md-6 col-12">
+            <app-card-landing [productOnList]="product"></app-card-landing>
+        </div>
+      </div>
+    </div>
+    <!--/ Tarjetas primer nivel -->
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="bop_numberSection">02</div>
+  <div class="bop_nameSection">nuestras ofertas</div>
+  <hr class="my-4">
+</div>
+  <!-- Segunda seccion -->
+  <div class="container bop_section">
+    <div class="row">
+    <!-- Tarjetas primer nivel -->
+    <div class="col-lg-6 col-12 align-self-center">
+      <div class="row">
+        <div
+          *ngFor="let product of secondSectionFourProducts"
+          class="col-lg-6 col-md-6 col-12"
+          >
+            <app-card-landing [productOnList]="product"></app-card-landing>
+        </div>
+      </div>
+    </div>
+    <!--/ Tarjetas primer nivel -->
+      <div class="col-lg-6 col-12 align-self-center">
+        <div class="bop_section-txt-container">
+          <h2 class="bop_section-subtitle text-primary">NEW PC, GET STARTED WITH THE MOST POPULAR</h2>
+          <p class="bop_section-txt">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua!</p>
+          <div class="collapse" id="collapse3">
+            <i class="me-2 my-3 bi bi-asterisk text-primary"></i>
+            <h4 class="mt-2 fs-6">be fancy</h4>
+          </div>
+          <div class="bop_containerKnowMoreSection">
+            <span class="bop_knowMore"><a class="" data-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapse3">
+              know more</a>
+            </span>
+          </div>
+          <hr class="bop_hr-margin">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- SOME STATIC CONTENT -->
+
+<!-- opiniones -->
+  <div class="container-fluid">
+    <div class="bop_numberSection">03</div>
+    <div class="bop_nameSection">opiniones de clientes</div>
+    <hr class="my-4">
+  </div>
+  <div class="container bop_section">
+    <div class="row">
+      <div class="col-lg-6 col-12 align-self-center">
+        <img class="bop_svg-img" src="assets/img/menpc.svg">
+      </div>
+      <div class="col-lg-6 col-12 ">
+        <div class="bop_commentIndex mt-4">
+          <img src="assets/img/avatar (1).jpg" alt="" class="rounded-circle" width="40" height="40">
+          <h4 class="d-inline m-2 fs-6">Rob Simpson</h4>
+          <span class="bop_commentDate">- 20 October, 2018</span>
+          <br>
+          <p class="my-2 bop_texto-corrido-claro">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
+            numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+          <div class="d-flex justify-content-end">
+            <i class="mx-1 my-3 bi bi-asterisk text-primary"></i>
+            <i class="mx-1 my-3 bi bi-asterisk text-primary"></i>
+            <i class="mx-1 my-3 bi bi-asterisk text-primary"></i>
+            <i class="mx-1 my-3 bi bi-asterisk text-primary"></i>
+            <i class="mx-1 my-3 bi bi-asterisk text-primary"></i>
+          </div>
+        </div>
+        <div class="bop_commentIndex mt-4">
+          <img src="assets/img/avatar (2).jpg" alt="" class="rounded-circle" width="40" height="40">
+          <h4 class="d-inline m-2 fs-6">Rob Simpson</h4>
+          <span class="bop_commentDate">- 20 October, 2018</span>
+          <br>
+          <p class="my-2 bop_texto-corrido-claro">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
+            numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+          <div class="d-flex justify-content-end">
+            <i class="mx-1 my-3 bi bi-asterisk text-primary"></i>
+            <i class="mx-1 my-3 bi bi-asterisk text-primary"></i>
+            <i class="mx-1 my-3 bi bi-asterisk text-primary"></i>
+          </div>
+        </div>
+        <div class="bop_commentIndex mt-4">
+          <img src="assets/img/avatar (3).jpg" alt="" class="rounded-circle" width="40" height="40">
+          <h4 class="d-inline m-2 fs-6">Rob Simpson</h4>
+          <span class="bop_commentDate">- 20 October, 2018</span>
+          <br>
+          <p class="my-2 bop_texto-corrido-claro">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
+            numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+          <div class="d-flex justify-content-end">
+            <i class="mx-1 my-3 bi bi-asterisk text-primary"></i>
+            <i class="mx-1 my-3 bi bi-asterisk text-primary"></i>
+            <i class="mx-1 my-3 bi bi-asterisk text-primary"></i>
+            <i class="mx-1 my-3 bi bi-asterisk text-primary"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <hr class="bop_hr-margin">
+  </div>
+
+
+
+<ng-template #elseBlock>
+  <!-- loading  false-->
+</ng-template>

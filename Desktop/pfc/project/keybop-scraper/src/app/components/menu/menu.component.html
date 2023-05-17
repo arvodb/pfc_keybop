@@ -1,0 +1,85 @@
+<div class="bop_logo-logIn container-fluid d-flex align-items-center justify-content-between pt-3">
+  <a class="bop_logoCicle_container" href="index.html">
+    <div class="bop_logoCircle rounded-circle d-flex justify-content-center align-items-center">
+      <img src="assets/media/Logo solo_Mesa de trabajo 1.svg"  class="bop_logoicon" alt="">
+    </div>
+  </a>
+  <div class="d-block bop_buttons-login-container">
+    <button type="button" class="bop_registers btn btn-outline-success btn-sm align-items-center"
+      data-bs-toggle="modal" data-bs-target="#login"><span>Log In</span>
+      <!-- <i class="bi bi-box-arrow-in-right align-self-center"></i> --></button>
+  </div>
+  <!-- modal login-->
+  <div class="modal fade bop_modal" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <section class="modal-body bop_loginbg">
+          <h1 class="bop_login-title">¡HOLA!</h1>
+          <div class="bop_login-subtitle">Nos alegramos de verte de nuevo</div>
+          <div class="bop_form-contenedor bop_encabezado-register">
+            <form action="" method="post">
+              <div class="bop_formCampo">
+
+                <input required type="text" name="nick">
+                <span></span>
+                <label>Nick</label>
+              </div>
+              <div class="bop_formCampo">
+                <input required type="password" name="passwd">
+                <span></span>
+                <label>Contraseña</label>
+              </div>
+              <div class="bop_mensaje-pass">
+                <span class="bop_login-subtitle bop_knowMore ">¿Has olvidado la contraseña?</span>
+              </div>
+              <div class="bop_login-submit">
+                <button type="button" class="btn btn-outline-secondary btn-sm align-items-center">No tengo cuenta</button>
+                <button type="button" class="bop_registers btn btn-outline-success btn-sm align-items-center">Log in</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- navbar full -->
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container bop_container_collapser">
+    <!-- hamburguer btn -->
+    <button class="navbar-toggler bop_collapser" id="navbarBtn" type="button" data-toggle="collapse"
+      data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon">
+        <!-- <img src="assets/img/logo/logoSvg_01.svg"> -->
+      </span>
+    </button>
+    <!-- collapsable menu -->
+    <div class="collapse navbar-collapse" id="navBar">
+      <div class="navbar-nav" id="bopHidden">
+        <a class="bop_selected_collapse nav-item nav-link " href="#">Home <i alt="icon_keyboard"
+            href="assets/img/logo/Recurso_12.png"></i></a>
+        <a class="bop_navItem nav-item nav-link " href="#"><i alt="icon_buy" class="bi bi-bag me-2"></i>Shop</a>
+        <a class="bop_navItem nav-item nav-link " href="#"><i alt="icon_telephone"
+            class="bi bi-telephone me-2"></i>Contact</a>
+        <a class="bop_navItem nav-item nav-link " href="#navBar"><i class="bi bi-person me-2"></i>Login</a>
+      </div>
+    </div>
+    <!-- horizontal -->
+    <div class="collapse navbar-collapse bop_navigation justify-content-center" id="bopNav">
+      <a class="navbar-brand" href="#"></a>
+      <ul class="navbar mr-auto mt-2 mt-lg-0" id="bopNav">
+        <li class="nav-item">
+          <a class="bop_selected nav-link" href="" [routerLink]="'/home'">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="shop.html" [routerLink]="'/shop'">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,33 @@
+<div class="bop_card_simple py-2">
+  <div class="bop_collapse-container ">
+    <button
+      class="btn bop_spec-button" type="button"
+      data-bs-toggle="collapse"
+      [attr.data-bs-target]="'#collapse-card-'+productOnList.id"
+      aria-expanded="false"
+      aria-controls="collapse-card1collapse-card-1"
+    >
+      +more info
+    </button>
+    <div class="bop_collapse-card collapse" id="collapse-card-{{productOnList.id}}">
+      <div class="container">
+        <div class="card text-white bg-dark card-body">
+          <div class="bop_collapsable-txt">
+            {{productOnList.title}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <img [routerLink]="'/shop'" class="bop_card-simple-img card-img-top" src="{{productOnList.image}}" alt="Card image cap">
+    <div class="card-body">
+      <div class="row justify-content-between bop_card-body-simple-container">
+        <div class="col-9">
+          <h5 class="card-title bop_titulo-card-simple">{{formatCardTitle(productOnList.title)}}</h5>
+        </div>
+        <div class="col-3">
+          <span class="bop_precio-final-simple">{{productOnList.price}}</span>
+        </div>
+      </div>
+    </div>
+</div>

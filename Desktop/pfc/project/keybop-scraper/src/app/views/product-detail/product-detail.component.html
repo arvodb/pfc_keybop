@@ -1,0 +1,81 @@
+<div *ngIf="loading; else elseBlock">
+
+<div class="container bop_section bop_product-detail-first">
+  <div class="row">
+    <div class="col-lg-5 col-md-6 col-sm-12 col-12 align-self-center">
+      <div class="p-3 rounded-2" style="background-color: white;">
+        <img class="bop_main-image-detail" src="{{productImages}}" alt="main-image">
+      </div>
+    </div>
+    <div class="col-lg-7 col-md-6 col-sm-12 col-12">
+
+      <div class="ms-3 h-100 container d-flex flex-column">
+
+        <div class="text-end mb-3"><span class="bop_price fw-bold fs-2 pt-3">{{ productPrice ? productPrice : 'precio'}} </span></div>
+
+        <div class="text-container pt-3">
+          <span class="bop_detail-product-title fs-4 mb-2">{{productDetails.name ? formatTitle(productDetails.name) : 'Titulo'}}</span>
+          <span
+            class="bop_texto-corrido-claro"
+            [innerHTML]="productDetails.short_description ? formatShortDescription(productDetails.short_description) : 'Descripcion Corta'">
+
+          </span>
+        </div>
+
+
+
+        <div class="mt-auto">
+          <div class="rating d-flex justify-content-end pt-3">
+            <i class="px-1 bi bi-star-fill"></i>
+            <i class="px-1 bi bi-star-fill"></i>
+            <i class="px-1 bi bi-star-fill"></i>
+            <i class="px-1 bi bi-star"></i>
+            <i class="px-1 bi bi-star"></i>
+          </div>
+          <hr class="bop_hr-margin my-4">
+          <div class="d-flex flex-column w-100 buttons">
+            <div class="row justify-content-between pe-3">
+              <div class="col-5">
+                <div class="bop_copyLink align-self-center ">
+                  <div class="bop_copyButton border rounded-2 p-2 text-center">
+                    <span class="bop_copyButton" (click)="copyAmazonLink()">Copy the link </span><i class="bi bi-clipboard bop_copyButton"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-5 align-self-center">
+                  <button class="bop_buttonToAmazon py-2" (click)="goToAmazon()">Go to amazon</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container bop_section bop_product-detail">
+  <div class="row">
+    <div class="col-lg-9 col-sm-7 col-12">
+      <span class="bop_detail-product-subTitle mb-2">DETALLES DEL PRODUCTO</span>
+      <div class="details">
+        <p
+          class="bop_texto-corrido-claro"
+          [innerHTML]="productDetails.short_description ? formatShortToLongDescription(productDetails.short_description) : 'Descripcion Corta'">
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-5 col-12">
+      <span class="bop_detail-product-subTitle mb-2">MÁS PRODUCTOS</span>
+      <div *ngFor="let productCard of fourProductCards">
+
+        <app-card-sidebar
+          [product]="productCard"
+        >
+        </app-card-sidebar>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<ng-template #elseBlock>
+
+</ng-template>
